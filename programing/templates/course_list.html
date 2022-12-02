@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1> Список курсов</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Наименование курсов</th>
+      <th scope="col">Ментор</th>
+      <th scope="col">Длительность</th>
+    </tr>
+
+  </thead>
+  <tbody>
+  {% for course in courses%}
+    <tr>
+      <th scope="row">{{course.id}}</th>
+      <td>{{course.name}}</td>
+      <td>{{course.mentor}}</td>
+      <td>{{course.month}} мес.</td>
+    </tr>
+{% endfor%}
+
+  </tbody>
+</table>
+       {% endblock content %}

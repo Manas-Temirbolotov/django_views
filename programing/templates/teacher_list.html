@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1> Список учителей</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ФИО учителя</th>
+      <th scope="col">Название класса</th>
+
+    </tr>
+
+  </thead>
+  <tbody>
+  {% for teacher in teachers%}
+    <tr>
+      <th scope="row">{{teacher.id}}</th>
+      <td>{{teacher.name}}</td>
+      <td>{{teacher.class_name}}</td>
+
+    </tr>
+{% endfor%}
+
+  </tbody>
+</table>
+       {% endblock content %}
