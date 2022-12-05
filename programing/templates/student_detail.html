@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Информация о студенте №{{ object.id }}</h1>
+<div>
+    <p>Название курса: {{ object.name }}</p>
+    <p>Операционная система: {{ object.laptop }}</p>
+    <p>Название курса: {{ object.course.name }} мес.</p>
+    <p>Ментор курса: {{ object.course.mentor }} мес.</p>
+</div>
+
+<div>
+    {% for var in my_var %}
+    <p></p>
+
+</div>
+
+{% endblock content %}

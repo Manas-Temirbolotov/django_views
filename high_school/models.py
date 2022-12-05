@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse_lazy
+
 
 class Teacher(models.Model):
     name = models.CharField(max_length=30, verbose_name='ФИО учителя')
@@ -20,5 +22,6 @@ class Pupil(models.Model):
     def __str__(self):
         return self.name
 
-
+    def get_absolute_url(self):
+        return reverse_lazy('student_detail', kwargs={'pk':self.id})
 

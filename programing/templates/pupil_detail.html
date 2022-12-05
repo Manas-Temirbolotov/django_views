@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Информация о Школьнике №{{ object.id }}</h1>
+<div>
+    <p>ФИО Школьника: {{ object.name }}</p>
+    <p>дата рождения Школьника: {{ object.birth_date }}</p>
+    <p>Учитель: {{ object.teacher.name }} мес.</p>
+
+</div>
+
+<div>
+    {% for var in my_var %}
+    <p></p>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1> Список студентов</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ФИО студента</th>
+      <th scope="col">Операционная система</th>
+      <th scope="col">Название курса</th>
+    </tr>
+
+  </thead>
+  <tbody>
+  {% for student in students %}
+    <tr>
+      <th scope="row">{{student.id}}</th>
+      <td>{{student.name}}</td>
+      <td>{{student.laptop}}</td>
+      <td>{{student.course.name}} </td>
+    </tr>
+{% endfor%}
+
+  </tbody>
+</table>
+       {% endblock content %}

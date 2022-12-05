@@ -7,7 +7,8 @@ class TeacherForm(forms.ModelForm):
         model = Teacher
         fields = '__all__'
 
-class TeacherForm(forms.ModelForm):
+
+class PupilForm(forms.ModelForm):
     class Meta:
-        model = Teacher
+        model = Pupil
         fields = '__all__'
